@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-const deptClass = { CAST: 'cast', COE: 'coe', CON: 'con', CCJ: 'ccj', 'CABM-B': 'cabmB', 'CABM-H': 'cabmH', Highschool: 'hs', Undergraduate: 'ug' };
-const badgeBg   = { cast: '#e0f2fe', coe: '#ede9fe', con: '#dcfce7', ccj: '#ffe4e6', cabmB: '#fef9c3', cabmH: '#fce7f3', hs: '#dbeafe', ug: '#fef3c7' };
-const badgeFg   = { cast: '#0369a1', coe: '#6d28d9', con: '#166534', ccj: '#9f1239', cabmB: '#854d0e', cabmH: '#831843', hs: '#1e40af', ug: '#78350f' };
+const deptClass = { CAST: 'cast', COE: 'coe', CON: 'con', CCJ: 'ccj', 'CABM-B': 'cabmB', 'CABM-H': 'cabmH', Highschool: 'hs', GraduateStudies: 'gs' };
+const badgeBg   = { cast: '#e0f2fe', coe: '#ede9fe', con: '#dcfce7', ccj: '#ffe4e6', cabmB: '#fef9c3', cabmH: '#fce7f3', hs: '#dbeafe', gs: '#fef3c7' };
+const badgeFg   = { cast: '#0369a1', coe: '#6d28d9', con: '#166534', ccj: '#9f1239', cabmB: '#854d0e', cabmH: '#831843', hs: '#1e40af', gs: '#78350f' };
 
 export default function LogsPanel({ showToast }) {
     const [logs, setLogs] = useState([]);
@@ -47,9 +47,8 @@ export default function LogsPanel({ showToast }) {
 
             {/* Filter row */}
             <div style={{ display: 'flex', gap: 10, marginBottom: 20, flexWrap: 'wrap' }}>
-                <Select value={filters.dept}   onChange={set('dept')}   options={['All Departments','CAST','COE','CON','CCJ','CABM-B','CABM-H', 'Highschool', 'Undergraduate']} />
+                <Select value={filters.dept}   onChange={set('dept')}   options={['All Departments','CAST','COE','CON','CCJ','CABM-B','CABM-H', 'Highschool', 'GraduateStudies']} />
                 <Select value={filters.year}   onChange={set('year')}   options={['All Year Levels','1st Year','2nd Year','3rd Year','4th Year']} />
-                <Select value={filters.course} onChange={set('course')} options={['All Courses','BSCS','BSIT','BSED','BSN','BSBA']} />
                 <BtnRow onClick={exportCSV}>⬇ Export CSV</BtnRow>
                 <BtnRow primary onClick={fetchLogs}>🔄 Refresh</BtnRow>
             </div>

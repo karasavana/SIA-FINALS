@@ -1,17 +1,21 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ScanController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
+// Landing page (public)
+Route::get('/', [LandingController::class, 'index'])->name('landing');
+
 // All routes require authentication (provided by Breeze)
 Route::middleware(['auth', 'verified'])->group(function () {
 
     // Main dashboard
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // QR Scanner API
     Route::post('/scan/lookup',   [ScanController::class, 'lookup'])->name('scan.lookup');

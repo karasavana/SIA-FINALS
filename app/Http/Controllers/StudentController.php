@@ -15,7 +15,7 @@ class StudentController extends Controller
             'student_id' => 'required|string|unique:students,student_id',
             'name' => 'required|string',
             'course' => 'nullable|string|required_if:dept,CAST,COE,CON,CCJ,CABM-B,CABM-H',
-            'dept' => 'required|string|in:CAST,COE,CON,CCJ,CABM-B,CABM-H,Highschool,Undergraduate',
+            'dept' => 'required|string|in:CAST,COE,CON,CCJ,CABM-B,CABM-H,Highschool,GraduateStudies',
             'year' => 'nullable|string|in:1st Year,2nd Year,3rd Year,4th Year|required_if:dept,CAST,COE,CON,CCJ,CABM-B,CABM-H',
         ]);
 

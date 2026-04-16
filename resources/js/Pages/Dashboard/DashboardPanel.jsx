@@ -58,31 +58,6 @@ export default function DashboardPanel({ stats, liveFeed, weekChart, deptStats }
                             </div>
                         </div>
                     </div>
-
-                    {/* Dept Ring */}
-                    <div style={card}>
-                        <div style={cardHeader}><div style={cardTitle}>By Department</div></div>
-                        <div style={{ padding: '18px 22px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-                                <svg width="100" height="100" viewBox="0 0 100 100" style={{ flexShrink: 0 }}>
-                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#e2e8f0" strokeWidth="14"/>
-                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#1976d2" strokeWidth="14" strokeDasharray="75 176" strokeDashoffset="25" strokeLinecap="round"/>
-                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#6d28d9" strokeWidth="14" strokeDasharray="45 176" strokeDashoffset="-50" strokeLinecap="round"/>
-                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#22c55e" strokeWidth="14" strokeDasharray="30 176" strokeDashoffset="-95" strokeLinecap="round"/>
-                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#f59e0b" strokeWidth="14" strokeDasharray="26 176" strokeDashoffset="-125" strokeLinecap="round"/>
-                                    <text x="50" y="55" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0a3578" fontFamily="Space Mono">100%</text>
-                                </svg>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                                    {['BSCS — 30%','BSIT — 18%','BSED — 12%','BSN — 10%','Others — 30%'].map((label, i) => (
-                                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: 'var(--gray-600)' }}>
-                                            <div style={{ width: 10, height: 10, borderRadius: '50%', background: Object.values(deptColors)[i] || '#94a3b8', flexShrink: 0 }} />
-                                            {label}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

@@ -27,7 +27,9 @@ export default function Sidebar({ activeTab, onTabChange, logCount, showToast })
                     <div style={{
                         width: 40, height: 40, background: 'var(--blue-500)',
                         borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
-                    }}>📚</div>
+                    }}>
+                        <img src="/images/logo.png" alt="LibraryQR" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
                     <div style={{ color: 'var(--white)' }}>
                         <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: '-.3px' }}>LibraryQR</div>
                         <div style={{ fontSize: 10, fontWeight: 400, color: 'var(--blue-300)', textTransform: 'uppercase', letterSpacing: 1 }}>

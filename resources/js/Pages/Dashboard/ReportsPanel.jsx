@@ -114,7 +114,7 @@ export default function ReportsPanel({ showToast }) {
                     <FormGroup label="Year Level">
                         <select style={formControl} value={year} onChange={e => setYear(e.target.value)}>
                             <option value="">All Year Levels</option>
-                            {['1st Year', '2nd Year', '3rd Year', '4th Year', 'Highschool', 'Undergraduate'].map(y => <option key={y} value={y}>{y}</option>)}
+                            {['1st Year', '2nd Year', '3rd Year', '4th Year', 'Highschool', 'GraduateStudies'].map(y => <option key={y} value={y}>{y}</option>)}
                         </select>
                     </FormGroup>
                 </div>

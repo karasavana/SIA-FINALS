@@ -111,7 +111,7 @@ export default function RegistrationModal({ studentId, onClose, onSuccess, showT
                                         setForm({
                                             ...form,
                                             dept: value,
-                                            ...(value === 'Highschool' || value === 'Undergraduate'
+                                            ...(value === 'Highschool' || value === 'GraduateStudies'
                                                 ? { year: '', course: '' }
                                                 : {}),
                                         });
@@ -130,10 +130,10 @@ export default function RegistrationModal({ studentId, onClose, onSuccess, showT
                                     <option value="CABM-H">CABM-H</option>
                                     <option value="CABM-B">CABM-B</option>
                                     <option value="Highschool">Highschool</option>
-                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="GraduateStudies">GraduateStudies</option>
                                 </select>
                             </div>
-                            {(form.dept !== 'Highschool' && form.dept !== 'Undergraduate') && (
+                            {(form.dept !== 'Highschool' && form.dept !== 'GraduateStudies') && (
                                 <>
                                     <div>
                                         <label style={{ display: 'block', fontSize: 14, fontWeight: 600, color: 'var(--gray-800)', marginBottom: 6 }}>

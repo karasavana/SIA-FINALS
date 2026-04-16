@@ -80,7 +80,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>📊 Library Report</h1>
+        <h1>Library Report</h1>
         <div class="info">
             <div class="info-row">
                 <span class="info-label">Report Type:</span>
